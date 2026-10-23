@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#10131d">
+  <meta name="description" content="Rated+Unrated Demonlist — a community-powered Geometry Dash level database.">
+  <title>Rated+Unrated Demonlist</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="Rated+Unrated Demonlist home">
+      <span class="brand-mark">R+</span>
+      <span><strong>RATED<span class="accent">+</span>UNRATED</strong><small>COMMUNITY LEVEL DATABASE</small></span>
+    </a>
+    <nav class="nav" aria-label="Main navigation">
+      <button class="nav-link active" data-view="rankings">Rankings</button>
+      <button class="nav-link" data-view="levels">All Levels</button>
+      <button class="nav-link" data-view="records">Records</button>
+      <button class="nav-link" data-view="leaderboard">Leaderboard</button>
+      <button class="nav-link" data-view="submissions">Submit Level</button>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="live-dot"></span> COMMUNITY-POWERED • FAN-MADE</div>
+        <h1>Every level.<br><span class="gradient-text">Every difficulty.</span></h1>
+        <p>A community-built database for rated, unrated, legacy, and challenge levels. Official rating and community difficulty are tracked separately.</p>
+        <div class="hero-actions">
+          <button class="btn btn-primary" data-go="rankings">Explore rankings <span>↗</span></button>
+          <button class="btn btn-secondary" data-go="submissions">Submit a level</button>
+        </div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+        <div class="cube cube-back"></div><div class="cube cube-front"><span></span><span></span><span></span><span></span></div>
+        <div class="art-label"><span class="art-label-dot"></span> ALL LEVELS WELCOME</div>
+      </div>
+    </section>
+
+    <section class="stats-grid" id="stats-grid" aria-label="Database statistics"></section>
+
+    <section class="content-section" id="app-view">
+      <div class="section-heading">
+        <div><div class="eyebrow">THE DATABASE</div><h2 id="view-title">Main Rankings</h2></div>
+        <div class="section-tools">
+          <label class="searchbox"><span>⌕</span><input id="search" type="search" placeholder="Search levels, creators, IDs…" autocomplete="off"></label>
+        </div>
+      </div>
+      <div id="view-content"></div>
+    </section>
+
+    <footer>
+      <div class="footer-brand"><span class="brand-mark small">R+</span><strong>Rated+Unrated Demonlist</strong></div>
+      <p>Independent fan project. Not affiliated with RobTop or the official Geometry Dash Demonlist.</p>
+      <p class="footer-note">Starter data is illustrative. Replace it with verified community data before publishing real rankings.</p>
+    </footer>
+  </main>
+  <dialog id="level-dialog" class="level-dialog">
+    <form method="dialog"><button class="dialog-close" aria-label="Close">×</button></form>
+    <div id="dialog-content"></div>
+  </dialog>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="app.js"></script>
+</body>
+</html>
